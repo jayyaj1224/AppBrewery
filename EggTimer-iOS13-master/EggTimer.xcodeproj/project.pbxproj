@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A47883FA25F4B5AF00746F93 /* E.wav in Resources */ = {isa = PBXBuildFile; fileRef = A47883F825F4B5AF00746F93 /* E.wav */; };
+		A47883FB25F4B5AF00746F93 /* G.wav in Resources */ = {isa = PBXBuildFile; fileRef = A47883F925F4B5AF00746F93 /* G.wav */; };
+		A47883FF25F4B5BC00746F93 /* C.wav in Resources */ = {isa = PBXBuildFile; fileRef = A47883FE25F4B5BC00746F93 /* C.wav */; };
 		AD5C106222D34E35001E14A5 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = AD5C106122D34E35001E14A5 /* README.md */; };
 		AD5C106622D36212001E14A5 /* alarm_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AD5C106522D36212001E14A5 /* alarm_sound.mp3 */; };
 		ADF037EE22D332A800A69E9A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF037ED22D332A800A69E9A /* AppDelegate.swift */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A47883F825F4B5AF00746F93 /* E.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = E.wav; path = "../../Xylophone-iOS13-master/Xylophone/Sounds/E.wav"; sourceTree = "<group>"; };
+		A47883F925F4B5AF00746F93 /* G.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = G.wav; path = "../../Xylophone-iOS13-master/Xylophone/Sounds/G.wav"; sourceTree = "<group>"; };
+		A47883FE25F4B5BC00746F93 /* C.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = C.wav; path = "../../Xylophone-iOS13-master/Xylophone/Sounds/C.wav"; sourceTree = "<group>"; };
 		AD5C106122D34E35001E14A5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		AD5C106522D36212001E14A5 /* alarm_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarm_sound.mp3; sourceTree = "<group>"; };
 		ADF037EA22D332A800A69E9A /* EggTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EggTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +72,9 @@
 				ADF037F122D332A800A69E9A /* ViewController.swift */,
 				ADF037F322D332A800A69E9A /* Main.storyboard */,
 				ADF037F622D332AD00A69E9A /* Assets.xcassets */,
+				A47883F825F4B5AF00746F93 /* E.wav */,
+				A47883F925F4B5AF00746F93 /* G.wav */,
+				A47883FE25F4B5BC00746F93 /* C.wav */,
 				AD5C106522D36212001E14A5 /* alarm_sound.mp3 */,
 				ADF037F822D332AD00A69E9A /* LaunchScreen.storyboard */,
 				ADF037FB22D332AD00A69E9A /* Info.plist */,
@@ -131,10 +140,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A47883FB25F4B5AF00746F93 /* G.wav in Resources */,
 				ADF037FA22D332AD00A69E9A /* LaunchScreen.storyboard in Resources */,
 				AD5C106622D36212001E14A5 /* alarm_sound.mp3 in Resources */,
 				ADF037F722D332AD00A69E9A /* Assets.xcassets in Resources */,
+				A47883FF25F4B5BC00746F93 /* C.wav in Resources */,
 				AD5C106222D34E35001E14A5 /* README.md in Resources */,
+				A47883FA25F4B5AF00746F93 /* E.wav in Resources */,
 				ADF037F522D332A800A69E9A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

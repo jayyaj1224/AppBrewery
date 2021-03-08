@@ -16,6 +16,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OEa-Oe-qHH">
+                                <rect key="frame" x="10" y="610.33333333333337" width="408" height="5"/>
+                                <color key="tintColor" red="0.55631996989999999" green="1" blue="0.90261927679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="hX8-Lh-RPb"/>
+                                </constraints>
+                            </progressView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="wI6-ag-afn" userLabel="Vertical Stack View">
                                 <rect key="frame" x="20" y="44" width="388" height="848"/>
                                 <subviews>
@@ -24,7 +31,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How do you like your eggs?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="XLm-5r-pSP" userLabel="Title Label">
                                                 <rect key="frame" x="0.0" y="0.0" width="388" height="256.66666666666669"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="42"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -143,18 +150,27 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="nJN-th-c5K" secondAttribute="trailing" id="5yS-t8-qhK"/>
+                                    <constraint firstItem="nJN-th-c5K" firstAttribute="leading" secondItem="wI6-ag-afn" secondAttribute="leading" id="y3d-KT-0V1"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.79607843137254897" green="0.94901960784313721" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wI6-ag-afn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="8Bl-BK-cpF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OEa-Oe-qHH" secondAttribute="trailing" constant="10" id="E37-3v-TLk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wI6-ag-afn" secondAttribute="bottom" id="TCD-uE-n4C"/>
                             <constraint firstItem="wI6-ag-afn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Wgn-J5-uGK"/>
+                            <constraint firstItem="nJN-th-c5K" firstAttribute="top" secondItem="OEa-Oe-qHH" secondAttribute="bottom" constant="20" id="dA3-tg-2Er"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wI6-ag-afn" secondAttribute="trailing" id="dky-ZA-Z3J"/>
+                            <constraint firstItem="OEa-Oe-qHH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wHa-Ee-KP2"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="eggHeader" destination="XLm-5r-pSP" id="xGd-gE-9d9"/>
+                        <outlet property="eggProgressBar" destination="OEa-Oe-qHH" id="emL-eC-Jbp"/>
                         <outlet property="remainTimeView" destination="2sh-b8-GeY" id="cXs-xq-VtF"/>
                         <outlet property="timerMessage" destination="XLm-5r-pSP" id="Cno-aL-Faz"/>
                     </connections>
