@@ -51,6 +51,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="dfsaf" destination="afG-6l-4Yj" id="k0Q-03-2jU"/>
                         <outlet property="diceImageViewOne" destination="Txj-ZS-bVs" id="oQ4-pq-jde"/>
                         <outlet property="diceImageViewTwo" destination="afG-6l-4Yj" id="zF9-G5-DwS"/>
                     </connections>

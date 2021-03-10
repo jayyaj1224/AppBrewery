@@ -11,7 +11,7 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
-    let eggTimes = ["Soft" : 15.0, "Medium" : 20.0, "Hard" : 5.0]
+    let eggTimes = ["Soft" : 99.0, "Medium" : 20.0, "Hard" : 5.0]
     var secondsRemaining = 60.0
     var totalTime = 60.0
     var timer = Timer()
@@ -61,7 +61,7 @@ class ViewController: UIViewController {
 //                playSound(key:"E")
 //                playSound(key:"G")
                 eggHeader.text = "How do you like your eggs?"
-                timer.invalidate()m
+                timer.invalidate()
                 present(alert, animated: true, completion: nil)
             } else {return}
         }
