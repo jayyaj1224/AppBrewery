@@ -37,8 +37,14 @@ struct CalculatorBrain {
             bmi = BMI(value: bmiValue, advice: "Fat! You're a pathetic pig ^__^", color: #colorLiteral(red: 0.7647058964, green: 0.08861612622, blue: 0, alpha: 1))
         }
     }
-    
-    //    <-- MVC refactoring: bmi Float를 String으로 바꾸는 Logic
+}
+
+
+
+
+
+
+//    <-- MVC refactoring: bmi Float를 String으로 바꾸는 Logic
 //    func bmiStringize() -> String {
 //        let bmiString = String(format: "%.1f", bmi?.value ?? 0.0)
 //        return bmiString
@@ -53,35 +59,33 @@ struct CalculatorBrain {
 //        let color = bmi?.color ?? .blue
 //        return color
 //    }
-    
-    //    func bmiStringize_GuardLet() -> String {
-    //        guard let safeBMI = bmi else {
-    //        return "0.0"
-    //        }
-    //        let bmiString = String(format: "%.1f", safeBMI)
-    //        return bmiString
-    //    }
-    //
-    //    func bmiStringize_IfLet() -> String {
-    //
-    //        if let safeBMI = bmi {
-    //            let bmiString = String(format: "%.1f", safeBMI)
-    //            return bmiString
-    //        } else {
-    //            return "0.0"
-    //        }
-    //
-    //    }
-    //
-    //    func bmiStringize_NilCoalescing() -> String {
-    //        let safeBMI : Float = bmi ?? 0.0
-    //        let bmiString = String(format: "%.1f", safeBMI)
-    //        return bmiString
-    //    }
-    //
-    //    func bmiStringize_Force() -> String {
-    //        let bmiString = String(format: "%.1f", bmi!)
-    //        return bmiString
-    //    }
-}
 
+//    func bmiStringize_GuardLet() -> String {
+//        guard let safeBMI = bmi else {
+//        return "0.0"
+//        }
+//        let bmiString = String(format: "%.1f", safeBMI)
+//        return bmiString
+//    }
+//
+//    func bmiStringize_IfLet() -> String {
+//
+//        if let safeBMI = bmi {
+//            let bmiString = String(format: "%.1f", safeBMI)
+//            return bmiString
+//        } else {
+//            return "0.0"
+//        }
+//
+//    }
+//
+//    func bmiStringize_NilCoalescing() -> String {
+//        let safeBMI : Float = bmi ?? 0.0
+//        let bmiString = String(format: "%.1f", safeBMI)
+//        return bmiString
+//    }
+//
+//    func bmiStringize_Force() -> String {
+//        let bmiString = String(format: "%.1f", bmi!)
+//        return bmiString
+//    }
