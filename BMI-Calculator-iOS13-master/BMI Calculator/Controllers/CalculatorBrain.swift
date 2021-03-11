@@ -30,33 +30,29 @@ struct CalculatorBrain {
         //bmi = BMI(value: bmiValue, advice: "", color: .red)
         switch bmiValue {
         case 0 ..< 18.5 :
-            bmi = BMI(value: bmiValue, advice: "Eat more pies", color: #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1))
-        case 18.5 ..< 24.9 : print("normal weight")
-            bmi = BMI(value: bmiValue, advice: "Eat more, Workout more", color: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1))
+            bmi = BMI(value: bmiValue, advice: "Thin! Eat more pies", color: #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1))
+        case 18.5 ..< 24.9 :
+            bmi = BMI(value: bmiValue, advice: "Normal! Eat more, Workout more", color: #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1))
         default :
-            bmi = BMI(value: bmiValue, advice: "Eat more, Workout more", color: #colorLiteral(red: 0.7647058964, green: 0.08861612622, blue: 0, alpha: 1))
+            bmi = BMI(value: bmiValue, advice: "Fat! You're a pathetic pig ^__^", color: #colorLiteral(red: 0.7647058964, green: 0.08861612622, blue: 0, alpha: 1))
         }
     }
     
     //    <-- MVC refactoring: bmi Float를 String으로 바꾸는 Logic
-    func bmiStringize() -> String {
-        let bmiString = String(format: "%.1f", bmi?.value ?? 0.0)
-        return bmiString
-    }
-    
-    func getAdvice() -> String {
-        let advice = bmi?.advice ?? ""
-        return advice
-    }
-    
-    func getColor() -> UIColor {
-        let color = bmi?.color ?? .blue
-        return color
-    }
-    
-    
-    
-    
+//    func bmiStringize() -> String {
+//        let bmiString = String(format: "%.1f", bmi?.value ?? 0.0)
+//        return bmiString
+//    }
+//
+//    func getAdvice() -> String {
+//        guard let advice = bmi?.advice else { return "fuck off" }
+//        return advice
+//    }
+//
+//    func getColor() -> UIColor {
+//        let color = bmi?.color ?? .blue
+//        return color
+//    }
     
     //    func bmiStringize_GuardLet() -> String {
     //        guard let safeBMI = bmi else {
