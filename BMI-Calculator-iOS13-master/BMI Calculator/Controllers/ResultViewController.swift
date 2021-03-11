@@ -10,14 +10,17 @@ import UIKit
 
 class ResultViewController: UIViewController {
 
-    var bmiValue: String?
+    var color : UIColor?
+    var advice: String?
+    var bmiValue: String? // <---- 바꾸고 싶은데 어떻게 할지
     
     @IBOutlet weak var bmiLabel: UILabel!
     @IBOutlet weak var adviceLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        adviceLabel.text = advice
+        view.backgroundColor = color
         bmiLabel.text = bmiValue
     }
     

@@ -36,9 +36,7 @@ class CalculateViewController: UIViewController {
         let height = heightSlider.value/100
         let weight = weightSlider.value
         
-        
         calculatorBrain.howMuchBmi(weight, height)  //<-- MVC refactoring
-        
         
         performSegue(withIdentifier: "goToResult", sender: self)
     }
@@ -46,12 +44,9 @@ class CalculateViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToResult" {
             let resultVC = segue.destination as! ResultViewController
-            
-            
             resultVC.bmiValue = calculatorBrain.bmiStringize() //<-- MVC refactoring
-            
-            
+            resultVC.advice = calculatorBrain.getAdvice()
+            resultVC.color = calculatorBrain.getColor()
         }
-        
     }
 }
