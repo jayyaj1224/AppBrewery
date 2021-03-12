@@ -9,7 +9,8 @@
 import UIKit
 
 class WeatherViewController: UIViewController, UITextFieldDelegate, WeatherManagerDelegate{
-
+    
+    
     @IBOutlet weak var conditionImageView: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var cityLabel: UILabel!
@@ -18,6 +19,7 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, WeatherManag
     var weatherManager  = WeatherManager()
     
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -73,3 +75,5 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, WeatherManag
     }
     
 }
+
+
