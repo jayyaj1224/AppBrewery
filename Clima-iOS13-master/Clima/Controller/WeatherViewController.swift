@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WeatherViewController: UIViewController, UITextFieldDelegate{
+class WeatherViewController: UIViewController, UITextFieldDelegate, WeatherManagerDelegate{
 
     @IBOutlet weak var conditionImageView: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
@@ -17,17 +17,20 @@ class WeatherViewController: UIViewController, UITextFieldDelegate{
     
     var weatherManager  = WeatherManager()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        weatherManager.delegate = self
         SearchTextField.delegate = self
     }
+    
     
     @IBAction func searchPressed(_ sender: UIButton) {
         SearchTextField.endEditing(true) // return 후 키보드 감추기
     }
     
-
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         SearchTextField.endEditing(true)
         return true //입력된 필드에서 바로 true를 리턴하여, 해당 함수 실행
@@ -51,5 +54,22 @@ class WeatherViewController: UIViewController, UITextFieldDelegate{
         }
     }
     
+    
+    func didUpdateWeather(_ weatherManager: WeatherManager, _ weather: WeatherModel) {
+        DispatchQueue.main.async {
+            self.temperatureLabel.text = weather.temperatureString
+            self.conditionImageView.image = UIImage(systemName: weather.conditionName)
+            self.cityLabel.text = weather.cityName
+        }
+        
+        
+//        print("City Name: \(weather.cityName)")
+//        print("Temperature: \(weather.temperatureString) Celsius")
+//        print("Description: \(weather.description) ")
+    }
+    
+    func didFailwithError(error: Error) {
+        print("sorry ;; ")
+    }
+    
 }
-
