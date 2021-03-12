@@ -29,15 +29,14 @@ class WeatherViewController: UIViewController, UITextFieldDelegate{
     
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        SearchTextField.endEditing(true) 
+        SearchTextField.endEditing(true)
         return true //입력된 필드에서 바로 true를 리턴하여, 해당 함수 실행
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         // hey VC, the user stoped editing
-        if let city = SearchTextField.text {
-            weatherManager.fetchWeather(cityNmae: city)
-        }
+        guard let city = SearchTextField.text else {return}
+        weatherManager.fetchWeather(cityNmae: city)
         SearchTextField.text = ""
     }
     
