@@ -28,15 +28,16 @@ class WeatherViewController: UIViewController {
         ourlocationManager.delegate = self
         ourlocationManager.requestWhenInUseAuthorization()
         ourlocationManager.requestLocation()
-        
+    }
+    
+    @IBAction func renewLocation(_ sender: Any) {
+        ourlocationManager.requestLocation()
     }
 }
 
 // Extension 을 이용해서
 //UITextFieldDelegate, WeatherManagerDelegate 두개의 프로토콜을 나누어 정리
 //MARK: - UITextFieldDelegate
-
-
 
 extension WeatherViewController: UITextFieldDelegate {
     
@@ -71,6 +72,7 @@ extension WeatherViewController: UITextFieldDelegate {
 
 //MARK: - WeatherManagerDelegate
 extension WeatherViewController: WeatherManagerDelegate {
+    
     func didUpdateWeather(_ weatherManager: WeatherManager, _ weather: WeatherModel) {
         DispatchQueue.main.async {
             self.temperatureLabel.text = weather.temperatureString
@@ -91,6 +93,7 @@ extension WeatherViewController: CLLocationManagerDelegate {
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let gotLocation = locations.last {
+            ourlocationManager.stopUpdatingLocation()
             let lat = gotLocation.coordinate.latitude
             let lon = gotLocation.coordinate.longitude
             print(lat,lon)
