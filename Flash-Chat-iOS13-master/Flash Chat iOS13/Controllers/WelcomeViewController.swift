@@ -15,7 +15,11 @@ class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        welcome()
+    }
+    
+    
+    func welcome() {
         titleLabel2.alpha = 0
         titleLabel.text = "Welcome to"
         titleLabel2.text = "🔥FireChat"
@@ -43,7 +47,5 @@ class WelcomeViewController: UIViewController {
         }
         
     }
-    
+
 }
-
-
