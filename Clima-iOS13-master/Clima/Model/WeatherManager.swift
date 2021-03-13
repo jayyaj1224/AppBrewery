@@ -20,6 +20,10 @@ class WeatherManager {
         let urlString = "\(weatherURL)&q=\(cityNmae)"
         performRequest(with: urlString)
     }
+    func fetchWeather(latitude: Double, longitude: Double){
+        let urlString = "\(weatherURL)&\(latitude)&\(longitude)"
+        performRequest(with: urlString)
+    }
     
     var delegate: WeatherManagerDelegate?
     

@@ -7,9 +7,9 @@
 //
 
 import UIKit
+import CoreLocation
 
-class WeatherViewController: UIViewController, UITextFieldDelegate, WeatherManagerDelegate{
-    
+class WeatherViewController: UIViewController {
     
     @IBOutlet weak var conditionImageView: UIImageView!
     @IBOutlet weak var temperatureLabel: UILabel!
@@ -17,16 +17,28 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, WeatherManag
     @IBOutlet weak var SearchTextField: UITextField!
     
     var weatherManager  = WeatherManager()
+    let ourlocationManager = CLLocationManager()
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
         weatherManager.delegate = self
         SearchTextField.delegate = self
+        
+        ourlocationManager.delegate = self
+        ourlocationManager.requestWhenInUseAuthorization()
+        ourlocationManager.requestLocation()
+        
     }
-    
+}
+
+// Extension 을 이용해서
+//UITextFieldDelegate, WeatherManagerDelegate 두개의 프로토콜을 나누어 정리
+//MARK: - UITextFieldDelegate
+
+
+
+extension WeatherViewController: UITextFieldDelegate {
     
     @IBAction func searchPressed(_ sender: UIButton) {
         SearchTextField.endEditing(true) // return 후 키보드 감추기
@@ -55,25 +67,37 @@ class WeatherViewController: UIViewController, UITextFieldDelegate, WeatherManag
             return false
         }
     }
-    
-    
+}
+
+//MARK: - WeatherManagerDelegate
+extension WeatherViewController: WeatherManagerDelegate {
     func didUpdateWeather(_ weatherManager: WeatherManager, _ weather: WeatherModel) {
         DispatchQueue.main.async {
             self.temperatureLabel.text = weather.temperatureString
             self.conditionImageView.image = UIImage(systemName: weather.conditionName)
             self.cityLabel.text = weather.cityName
         }
-        
-        
-//        print("City Name: \(weather.cityName)")
-//        print("Temperature: \(weather.temperatureString) Celsius")
-//        print("Description: \(weather.description) ")
     }
-    
     func didFailwithError(error: Error) {
-        print("sorry ;; ")
+        print("didFailwithErorr ")
     }
-    
 }
 
 
+
+//MARK: - CLLocationManagerDelegate
+
+extension WeatherViewController: CLLocationManagerDelegate {
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let gotLocation = locations.last {
+            let lat = Double(gotLocation.coordinate.latitude)
+            let lon = Double(gotLocation.coordinate.longitude)
+            weatherManager.fetchWeather(latitude: lat, longitude: lon)
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("sorry")
+    }
+}
