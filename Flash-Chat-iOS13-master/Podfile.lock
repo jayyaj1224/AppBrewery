@@ -1,0 +1,16 @@
+PODS:
+  - CLTypingLabel (0.3.0)
+
+DEPENDENCIES:
+  - CLTypingLabel
+
+SPEC REPOS:
+  trunk:
+    - CLTypingLabel
+
+SPEC CHECKSUMS:
+  CLTypingLabel: e5f3adf9467a38664a505e6475c23946c3b3c424
+
+PODFILE CHECKSUM: 175299c0748110af16f42ac31cc2f9df15931699
+
+COCOAPODS: 1.10.1
