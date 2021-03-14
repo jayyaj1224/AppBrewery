@@ -29,4 +29,3 @@ class MessageCell: UITableViewCell {
 
 
 
-func findNemo(from [Animal])

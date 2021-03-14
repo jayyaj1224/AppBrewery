@@ -33,21 +33,21 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⚡️FlashChat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7D-jv-BlJ">
-                                <rect key="frame" x="32" y="415" width="350" height="60"/>
+                                <rect key="frame" x="74" y="405" width="266.5" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="ph1-wX-D3a"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="57"/>
-                                <color key="textColor" name="BrandBlue"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="43"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⚡️FlashChat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcK-U7-oqa">
-                                <rect key="frame" x="35" y="415" width="344" height="60"/>
+                                <rect key="frame" x="17.5" y="405" width="379.5" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="UTN-fv-KjL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="56"/>
-                                <color key="textColor" name="BrandBlue"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="62"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2x-tz-C9Y">
@@ -71,11 +71,11 @@
                         <constraints>
                             <constraint firstItem="dWe-nW-2HB" firstAttribute="trailing" secondItem="w0w-hE-MVy" secondAttribute="trailing" id="7Vx-Xq-VaO"/>
                             <constraint firstItem="dWe-nW-2HB" firstAttribute="leading" secondItem="w0w-hE-MVy" secondAttribute="leading" id="Ag7-Hh-D9X"/>
-                            <constraint firstItem="AcK-U7-oqa" firstAttribute="centerY" secondItem="w0w-hE-MVy" secondAttribute="centerY" constant="-30" id="J19-TJ-bDJ"/>
+                            <constraint firstItem="AcK-U7-oqa" firstAttribute="centerY" secondItem="w0w-hE-MVy" secondAttribute="centerY" constant="-40" id="J19-TJ-bDJ"/>
                             <constraint firstItem="AcK-U7-oqa" firstAttribute="centerX" secondItem="w0w-hE-MVy" secondAttribute="centerX" id="Mfy-u8-693"/>
                             <constraint firstItem="dWe-nW-2HB" firstAttribute="bottom" secondItem="w0w-hE-MVy" secondAttribute="bottom" id="ZsM-5p-lNb"/>
                             <constraint firstItem="dWe-nW-2HB" firstAttribute="top" secondItem="h2x-tz-C9Y" secondAttribute="bottom" constant="8" id="cnI-Zh-aEc"/>
-                            <constraint firstItem="y7D-jv-BlJ" firstAttribute="centerY" secondItem="w0w-hE-MVy" secondAttribute="centerY" constant="-30" id="gfk-Y9-fk2"/>
+                            <constraint firstItem="y7D-jv-BlJ" firstAttribute="centerY" secondItem="w0w-hE-MVy" secondAttribute="centerY" constant="-40" id="gfk-Y9-fk2"/>
                             <constraint firstItem="y7D-jv-BlJ" firstAttribute="centerX" secondItem="w0w-hE-MVy" secondAttribute="centerX" id="m7c-iF-eXJ"/>
                             <constraint firstItem="h2x-tz-C9Y" firstAttribute="trailing" secondItem="w0w-hE-MVy" secondAttribute="trailing" id="sNZ-Ul-l2q"/>
                             <constraint firstItem="h2x-tz-C9Y" firstAttribute="leading" secondItem="w0w-hE-MVy" secondAttribute="leading" id="tLN-qz-xiG"/>

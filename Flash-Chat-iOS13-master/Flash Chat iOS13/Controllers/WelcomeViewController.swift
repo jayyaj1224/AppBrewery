@@ -21,12 +21,12 @@ class WelcomeViewController: UIViewController {
     
     func welcome() {
         titleLabel2.alpha = 0
-        titleLabel.text = "Welcome to"
-        titleLabel2.text = "🔥FireChat"
+        titleLabel.text = "Would you like to"
+        titleLabel2.text = "Fair Play"
         
-        for n in 1...10 {
-            Timer.scheduledTimer(withTimeInterval: 0.07*Double(n), repeats: false) { (timer) in
-                self.titleLabel.alpha = CGFloat(n)*0.1
+        for n in 1...40 {
+            Timer.scheduledTimer(withTimeInterval: 0.03*Double(n), repeats: false) { (timer) in
+                self.titleLabel.alpha = CGFloat(n)*0.025
             }
         }
         
